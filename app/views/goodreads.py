@@ -25,6 +25,8 @@ def index():
     soup = BeautifulSoup(widget_response.content, "html.parser")
     content = soup.find("div", {"class": "goodreads_container", "id": "gr_reviews_widget"})
 
+    content.find("div", {"class": "gr_reviews_header"}).decompose()
+
     for link in content.findAll('a'):
         link["href"] = f"{BASE_URL}{link['href']}"
 
