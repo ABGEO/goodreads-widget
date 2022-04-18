@@ -12,7 +12,7 @@ BASE_URL = "https://goodreads.com"
 @bp.route("/")
 def index():
     width = request.args.get("width", "600", str)
-    height = request.args.get("height", "300", str)
+    height = request.args.get("height", "250", str)
     updates = request.args.get("updates", "3", str)
 
     widget_response = requests.get(f"{BASE_URL}/widgets/user_update_widget", {
