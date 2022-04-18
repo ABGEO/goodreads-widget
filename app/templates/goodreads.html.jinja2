@@ -1,0 +1,150 @@
+<svg width="{{ width }}" height="{{ height }}" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <foreignObject width="{{ width }}" height="{{ height }}">
+        <style type="text/css">
+
+            body {
+                padding: 0;
+                margin: 0;
+                overflow-x: hidden;
+            }
+
+            img {
+                border-style: none;
+            }
+
+            a {
+                text-decoration: none;
+                target: _blank;
+                color: #660;
+            }
+
+            .goodreads_container {
+                width: 583px;
+            }
+
+            .update p {
+                line-height: 16px;
+                font-weight: bold;
+                margin: 0px;
+            }
+
+            .goodreads_container {
+                font-family: verdana, arial, helvetica, sans-serif;
+            }
+
+            .gr_reviews_header {
+                font-size: 1.1em;
+                padding: 5px 0 10px 0;
+                border-bottom: 1px solid #A8A8A8;
+            }
+
+            .gr_reviewer_name {
+                float: left;
+            }
+
+            .gr_review_container {
+                font-size: 12px;
+                border-bottom: 1px solid #A8A8A8;
+                padding: 0px;
+            }
+
+            .gr_branding {
+                float: right;
+                color: #382110;
+                font-size: .9em;
+                text-decoration: none;
+                font-family: verdana, arial, helvetica, sans-serif;
+            }
+
+            .gr_review_text {
+                font-family: verdana, arial, helvetica, sans-serif;
+            }
+
+            .gr_branding:hover {
+                text-decoration: underline;
+            }
+
+            .gr_reviews_showing {
+                color: #d7d7d7;
+                font-size: 10px;
+            }
+
+            .gr_more_link {
+                font-weight: bold;
+            }
+
+            .updateImage {
+                float: left;
+                margin-right: 10px;
+            }
+
+            .gr_reviews_header .updateImage img {
+                padding-left: 5px;
+            }
+
+            .updateImage img {
+                max-height: 45px;
+                overflow: hidden;
+                width: 30px;
+            }
+
+            .updateAction {
+                margin-bottom: 5px;
+            }
+
+            .clear {
+                clear: both;
+            }
+
+            .update {
+                margin-bottom: 10px;
+                border-bottom: 1px solid #EBEBEB;
+                padding: 5px 0;
+                margin-bottom: 0px;
+            }
+
+            .graphContainer {
+                background-color: #EFECE0;
+                overflow: hidden;
+                width: 130px;
+            }
+
+            .graphBar {
+                background-color: #D7D2C4;
+            }
+
+            .last {
+                border: none;
+            }
+
+            /* Let's get this party started */
+            ::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+                border-radius: 3px;
+                background: #AD8766;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                border-radius: 3px;
+                background: #683205;
+            }
+
+            ::-webkit-scrollbar-thumb:window-inactive {
+                background: #683205;
+            }
+
+        </style>
+
+        <div xmlns="http://www.w3.org/1999/xhtml" class="container">
+            <div class="goodreads_container" id="gr_reviews_widget">
+                {{ content }}
+            </div>
+        </div>
+    </foreignObject>
+</svg>
