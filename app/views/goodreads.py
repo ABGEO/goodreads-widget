@@ -44,6 +44,6 @@ def index():
     })
 
     resp = Response(svg, mimetype="image/svg+xml")
-    resp.headers["Cache-Control"] = "s-maxage=1"
+    resp.headers["Cache-Control"] = "s-maxage=300"
 
     return resp
