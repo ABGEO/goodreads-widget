@@ -15,12 +15,16 @@ def index():
     height = request.args.get("height", "250", str)
     updates = request.args.get("updates", "3", str)
 
+    widget_request_headers = {
+        "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                      'Chrome/111.0.0.0 Safari/537.36'
+    }
     widget_response = requests.get(f"{BASE_URL}/widgets/user_update_widget", {
         "height": height,
         "width": width,
         "num_updates": updates,
         "user": 149423144
-    })
+    }, headers=widget_request_headers)
 
     soup = BeautifulSoup(widget_response.content, "html.parser")
     content = soup.find("div", {"class": "goodreads_container", "id": "gr_reviews_widget"})
